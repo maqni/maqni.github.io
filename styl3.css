@@ -30,7 +30,7 @@ header li a {
 }
 
 header {
-    background-color: rgba(221, 51, 0, 0.92); /* #DD3300 en daarmee 4488BB F5EE55 kana 556677 kana 0F1B07 kana 231B12 zeewier F77604 caviaroranje */
+    background-color: rgba(36, 28, 18, 0.92); /* #DD3300 en daarmee 4488BB F5EE55 kana 556677 kana 0F1B07 kana 231B12 zeewier F77604 caviaroranje */
     position: fixed; /* sticky? */
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@ header {
     height: 60px; /* eh ń !úbe ='āun ='án « 'nʘāhan » /è margin-top. */
     display:flex;
     align-items: center;
-    box-shadow: rgba(0, 48, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(256, 122, 5, 0.47) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 /* (/n/ānn /àn sīi) */
@@ -55,9 +55,15 @@ section {
     padding: 1vw;
     margin: 2vw;
     max-width: 62em;
-    background-color: rgba(154, 205, 50, 0.8);
-    border-radius: 1em;
+    background-color: rgba(36, 28, 18, 0.8);
+    border-radius: 0.5em;
+    color: white; /* #F5EE55 */
+        box-shadow: rgba(0, 48, 0, 0.37) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     /*width: clamp(400px, 100%, 1000px);*/ /* minste wydte, wydte, hoogste wydte */
+}
+
+h1, h2, h3, h4 {
+    color: yellowgreen;
 }
 
 /* Skakels in bo se navigasie */
@@ -97,19 +103,9 @@ a:focus {
 
 .kas {
   font-family: 'Georgia', serif;
-  color: yellowgreen;
-  background: #231B12;
-  float: right; /* kana inline-end */
-}
-
-.taalkeuze {
-    margin-right: min(4vw); /* minste uit (waardes) */
-    margin-left:auto;
-    display:block; /* dalk weglaat */
-}
-
-.taalknopje {
-    max-height: 1.4em;width:auto;
+  color: #F5EE55;
+  background: #DD3300;
+  float: inline-end; /* kana right vir edge en chrome */
 }
 
 /* vir tabel

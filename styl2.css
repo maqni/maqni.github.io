@@ -55,8 +55,8 @@ section {
     padding: 1vw;
     margin: 2vw;
     max-width: 62em;
-    background-color: rgba(154, 205, 50, 0.8);
-    border-radius: 1em;
+    background-color: rgba(256, 256, 256, 0.8);
+    border-radius: 0.2em;
     /*width: clamp(400px, 100%, 1000px);*/ /* minste wydte, wydte, hoogste wydte */
 }
 
@@ -96,20 +96,10 @@ a:focus {
 }
 
 .kas {
-  font-family: 'Georgia', serif;
+  font-family: 'Georgia', monospace;
   color: yellowgreen;
   background: #231B12;
-  float: right; /* kana inline-end */
-}
-
-.taalkeuze {
-    margin-right: min(4vw); /* minste uit (waardes) */
-    margin-left:auto;
-    display:block; /* dalk weglaat */
-}
-
-.taalknopje {
-    max-height: 1.4em;width:auto;
+  float: inline-end; /* kana right vir edge en chrome */
 }
 
 /* vir tabel
