@@ -12,12 +12,12 @@ body {
 
 /* n/ānn /àn sīi */
  header img {
-    height: 100%; /* header height ń ='āun tàha ké té'e. */
+    height: 2em; /* header height ń ='āun tàha ké té'e. */
     margin-left: 4em;
 }
 
 header * { /*  * ń kánn tháa n!úun tánn ń bà tshûu kè n/ānn /àn sīi tshôe kànn /îi */
-    display: inline;
+    display: inline; /* kana flex */
 }
 
 header li {
@@ -39,6 +39,19 @@ header {
     display:flex;
     align-items: center;
     box-shadow: rgba(0, 48, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@media screen and (max-width: 700px) {
+  header {height: 8em;align-items: stretch;position: sticky;}
+  nav a {
+    float: center;
+    line-height: 2.6;
+    /* display: block; */
+  }
+   header img {
+    height: 1em; /* header height ń ='āun tàha ké té'e. */
+    margin-left: 1.5em;
+}
 }
 
 /* (/n/ānn /àn sīi) */
