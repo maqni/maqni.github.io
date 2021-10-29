@@ -91,6 +91,9 @@ a:focus {
     width: min(100%, 400px);
   } */
 
+.taalknopje {
+    max-height: 1.4em;width:auto;
+}
 /*
 .kas {
   margin-bottom: 1.3em;
