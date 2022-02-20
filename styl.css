@@ -1,33 +1,49 @@
-html,
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('font/ubuntu-r-webfont.woff2') format('woff2'),
+         url('font/ubuntu-r-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntulight';
+    src: url('font/ubuntu-l-webfont.woff2') format('woff2'),
+         url('font/ubuntu-l-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntubold';
+    src: url('font/ubuntu-b-webfont.woff2') format('woff2'),
+         url('font/ubuntu-b-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+html, /*  */
 body {
     margin: 0;
-    /*margin-top: 60px;*/ /* eh ń !úbe ='āun ='ē n/ānn /àn sīi.  */
-    width: 100vw;
+    /*margin-top: 60px;*/ /* eh ń !úbe ='āun ='ē nǀānn ǀàn sīi.  */
+    width: 98.6vw;
     height: 100vh;
     /*max-width: 60em;*/
-    background-image: url('https://cdn.pixabay.com/photo/2019/10/29/11/45/gods-gift-4586740_960_720.jpg');
+    background-color: #231B12;
+    background-image: url("https://cdn.pixabay.com/photo/2019/10/29/11/45/gods-gift-4586740_960_720.jpg");
+    /* <source media="(max-width:600px)" srcset="picture-mid.png"> vir prente binne html */
     background-size: cover;
-    font-family: 'Ubuntu','Open Sans','Helvetica Neue',sans-serif;
-}
 
-/* n/ānn /àn sīi */
- header img {
-    height: 2em; /* header height ń ='āun tàha ké té'e. */
-    margin-left: 4em;
+    background-attachment: fixed;
+    font-family: 'ubunturegular','CMU','Open Sans','Helvetica Neue',sans-serif;
 }
+/*:lang(en) eigen taalinstellingen
+:lang(de)*/q {quotes: auto;}
 
-header * { /*  * ń kánn tháa n!úun tánn ń bà tshûu kè n/ānn /àn sīi tshôe kànn /îi */
-    display: inline; /* kana flex */
-}
+main p { font-family: 'ubuntulight','CMU','Open Sans','Helvetica Neue',sans-serif; }
 
-header li {
-    margin: 1.2em;
-}
-
-header li a {
-    /*color: black;*/
-    text-decoration: none;
-}
+/* nǀānn ǀàn sīi */
 
 header {
     background-color: rgba(221, 51, 0, 0.92); /* #DD3300 en daarmee 4488BB F5EE55 kana 556677 kana 0F1B07 kana 231B12 zeewier F77604 caviaroranje */
@@ -35,26 +51,82 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px; /* eh ń !úbe ='āun ='án « 'nʘāhan » /è margin-top. */
+    height: 3.8em; /* eh ń !úbe ='āun ='án « 'nʘāhan » ǀè margin-top. */
     display:flex;
     align-items: center;
-    box-shadow: rgba(0, 48, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 48, 0, 0.17) 0 -1.4em 1.6em 0 inset, rgba(0, 0, 0, 0.15) 0 -2.25em 1.9em 0 inset, rgba(0, 0, 0, 0.1) 0 -4.9em 2.5em 0 inset, rgba(0, 0, 0, 0.06) 0em 0.2em 0.1em, rgba(0, 0, 0, 0.09) 0 0.3em 0.15em, rgba(0, 0, 0, 0.09) 0 0.5em 0.25em, rgba(0, 0, 0, 0.09) 0 1em 0.5em, rgba(0, 0, 0, 0.09) 0 2em 1em;
 }
 
-@media screen and (max-width: 700px) {
-  header {height: 8em;align-items: stretch;position: sticky;}
-  nav a {
-    float: center;
-    line-height: 2.6;
-    /* display: block; */
-  }
-   header img {
-    height: 1em; /* header height ń ='āun tàha ké té'e. */
-    margin-left: 1.5em;
-}
+ header img {
+    height: 2.5rem; /* header height ń ='āun tàha ké té'e. */
+    margin-left: 5%;
 }
 
-/* (/n/ānn /àn sīi) */
+header * { /*  * ń kánn tháa n!úun tánn ń bà tshûu kè nǀānn ǀàn sīi tshôe kànn ǀîi */
+    display: inline; /* kana flex */
+}
+
+header li {
+    margin: 1.2rem;
+}
+
+header a {
+    /*color: white;*/
+    text-decoration: none;
+}
+
+header a.kansii {
+    color: yellowgreen;
+}
+
+/* Skakels in bo se navigasie */
+nav a {
+    border-radius: 0.2em;
+    box-shadow: 0.2em 0.2em 0.5em;
+/*    background: #231B12; */
+    padding: 0.3em;
+}
+
+/*     submenu skakels    WIS UIT INDIEN NIE NODIG NIE  */
+.submenu {
+    display: inline-block; /* met "block" verksyn dropdown links,daarsonder regs,beide werk nie */
+    visibility: hidden;
+    position: absolute; /* nodig ? */
+    height: 0;
+    z-index: 1000;
+}
+/* IE 11 won't get this, but at least the top-level menus will work */
+ul li:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+} /* n n ba //khua taqnn */
+.submenu li {
+    display: block;   width: 100vw;margin-left: -100px;padding-left: -20px; /* margin en padding mag weg want werk nie */
+}
+
+nav li:hover  .submenu,
+nav li:active  .submenu,
+nav li:focus  .submenu {
+    visibility: visible;
+    height: auto;
+}
+
+/* (/nǀānn ǀàn sīi) */
+
+/* (nǂūun ǀàn sīi) */
+
+footer {
+    display: flex;
+    justify-content: space-around; /* kana -between */
+    background-color: rgba(36, 28, 18);
+    box-shadow: rgba(0, 48, 0, 0.17) 0 -1.4em 1.6em 0 inset, rgba(0, 0, 0, 0.15) 0 -2.25em 1.9em 0 inset, rgba(0, 0, 0, 0.1) 0 -4.9em 2.5em 0 inset, rgba(0, 0, 0, 0.06) 0em 0.2em 0.1em, rgba(0, 0, 0, 0.09) 0 0.3em 0.15em, rgba(0, 0, 0, 0.09) 0 0.5em 0.25em, rgba(0, 0, 0, 0.09) 0 1em 0.5em, rgba(0, 0, 0, 0.09) 0 2em 1em;
+    color: white;
+}
+
+.grid { flex: 50%; padding-left: 4%; padding-right: 4%; }
+
+/* ( / nǂūun ǀàn sīi) */
 
 /* hoofddeel? */
 main {
@@ -68,17 +140,15 @@ section {
     padding: 1vw;
     margin: 2vw;
     max-width: 62em;
-    background-color: rgba(154, 205, 50, 0.8);
-    border-radius: 1em;
+    background-color: rgba(36, 28, 18, 0.92);
+    border-radius: 0.6em;
+    color: white; /* #F5EE55 */
     /*width: clamp(400px, 100%, 1000px);*/ /* minste wydte, wydte, hoogste wydte */
+    box-shadow: rgba(50, 50, 93, 0.25) 0 0.8em 1.7em -0.3em, rgba(0, 0, 0, 0.3) 0 0.5em 1em -0.5em;
 }
 
-/* Skakels in bo se navigasie */
-nav a {
-    border-radius: 0.2em;
-    box-shadow: 0.2em 0.2em 0.5em;
-/*    background: #231B12; */
-  padding: 0.3em;
+h1, h2, h3, h4 {
+    color: yellowgreen;
 }
 
 a {
@@ -93,10 +163,84 @@ a:focus {
     color: forestgreen;
 }
 
+/* [href$=".pdf"]::after{
+content: " " url("https://cdn3.iconfinder.com/data/icons/document-icons-2/30/647716-pdf-24.png");
+} */
+
 /* prent se (wydte in persent van houer, hoogste wydte)
   img {
     width: min(100%, 400px);
   } */
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+
+    text-decoration: none;
+    color: yellowgreen;
+    background: #231B12;
+    transition: all .35s;
+    text-align: center;
+    padding: 0.8em 0.2em;
+    border-radius: 0.2em;
+    box-shadow: 0.4em 0.4em 0.8em;
+    display: none;
+}
+.show-menu:hover,
+.show-menu:focus {
+    color: forestgreen;
+}
+/*Hide checkbox*/
+input[type=checkbox] {
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+  header {height: 5em;align-items: stretch;position: sticky;}
+  nav a {
+    align-items: center;
+    line-height: 2.6;
+    /* display: block; */
+  }
+  body {
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/29/11/45/gods-gift-4586740_960_720.jpg'); /* 'ahnn sii tshoann tshoo */
+  }
+   header img {
+    height: 1em; /* header height ń ='āun tàha ké té'e. */
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  /*Style for menu links*/
+  li a {
+    display:block;
+    min-width:8em;
+    text-align: center;
+    background: #231B12;
+  }
+  /*Make dropdown links appear inline*/
+    ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    li {
+            display:inline-block;
+        margin-bottom: 1em;
+    }
+    /*Make all menu links full width*/
+    ul li, li a {
+        width: 100%;margin: .4em;
+    }
+    /*Display 'show menu' link*/
+    .show-menu {
+        display:block;
+    }
+}
+
 
 /*
 .kas {
@@ -104,21 +248,82 @@ a:focus {
   text-align: justify;
 }  */
 
+strong  { font-weight: bold; } /* DIK SKRIF WERK NOG NIE */
+
+picture {
+    overflow: visible; /* weglaat? */
+    text-align: center;
+    text-indent: 0;
+}
+
+figcaption {
+    font-size: .8em;
+    opacity: 0.7;
+    position: inherit; /* werk nie */
+    bottom: 0; /* werk nie */
+}
+
 .talen {
-  columns: 300px 3;
+    columns: 20em 3; /*   display: grid;grid-template-columns: minmax(100px, 20em);grid-template-rows: 1.5em;grid-auto-flow: column;gap: 0.2em 1em; WERK GLAD NIE
+ */
+}
+
+.siitshoanntshoo {
+    text-align: justify;
+}
+
+.oqhbar {
+    padding: 0.5em;
+    border-radius: 50%;
+    max-height: 20em;
+    max-width: 30%;
+    float: right;
+    z-index: 0;
+}
+
+.oqhbal {
+    padding: 0.5em;
+    border-radius: 50%;
+    max-height: 30em;
+    max-width: 30%;
+    float: left;
+    z-index: -1000; /* werk nie */
+}
+
+.chuantshoe {
+    filter: contrast(150%);
+}
+
+.txali {
+    font-size: .8em;
+}
+
+.qum {
+    max-width: 20em;
+}
+
+.kas::selection {
+    background: indianred;
+    color: white;
 }
 
 .kas {
-  font-family: 'Georgia', serif;
-  color: yellowgreen;
-  background: #231B12;
-  float: right; /* kana inline-end */
+    font-family: 'Georgia', serif;
+    font-size: 0.8em;
+    color: yellowgreen;
+    background: #231B12;
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    float: right;
+    text-align: right; /* kana inline-end kana justify-self: end (en bo justify-items???: start) */
 }
 
 .taalkeuze {
     margin-right: min(4vw); /* minste uit (waardes) */
     margin-left:auto;
-    display:block; /* dalk weglaat */
+
+    display: block; /* dalk weglaat */
 }
 
 .taalknopje {
@@ -127,7 +332,7 @@ a:focus {
 
 /* vir tabel
 divofwatookal {
-  column-count:3;
-  column-width: 12em;
+    column-count:3;
+    column-width: 20em;
 }
 */
