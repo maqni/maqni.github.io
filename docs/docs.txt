@@ -1,0 +1,1 @@
+Directory "docs": This directory is for all uploaded documents. Licence: Please note that the licence under which a document is published is mentioned in each document itself.
