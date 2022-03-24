@@ -41,7 +41,7 @@ body {
 /*:lang(en) eigen taalinstellingen
 :lang(de)*/q {quotes: auto;}
 
-main p { font-family: 'ubuntulight','CMU','Open Sans','Helvetica Neue',sans-serif; }
+main p { font-family: 'ubuntulight','CMU','Open Sans','Helvetica Neue',sans-serif; line-height: 1.6; }
 
 /* nǀānn ǀàn sīi */
 
@@ -54,6 +54,7 @@ header {
     height: 3.8em; /* eh ń !úbe ='āun ='án « 'nʘāhan » ǀè margin-top. */
     display:flex;
     align-items: center;
+    z-index:2;
     box-shadow: rgba(0, 48, 0, 0.17) 0 -1.4em 1.6em 0 inset, rgba(0, 0, 0, 0.15) 0 -2.25em 1.9em 0 inset, rgba(0, 0, 0, 0.1) 0 -4.9em 2.5em 0 inset, rgba(0, 0, 0, 0.06) 0em 0.2em 0.1em, rgba(0, 0, 0, 0.09) 0 0.3em 0.15em, rgba(0, 0, 0, 0.09) 0 0.5em 0.25em, rgba(0, 0, 0, 0.09) 0 1em 0.5em, rgba(0, 0, 0, 0.09) 0 2em 1em;
 }
 
@@ -137,7 +138,7 @@ main {
 
 section {
     /*margin: 10vw; */
-    padding: 1vw;
+    padding: 2.4vw;
     margin: 2vw;
     max-width: 62em;
     background-color: rgba(36, 28, 18, 0.92);
@@ -239,6 +240,9 @@ input[type=checkbox]:checked ~ #menu {
     .show-menu {
         display:block;
     }
+    section {
+    padding: clamp(2.4vw,1.6em,10vw);
+}
 }
 
 
@@ -251,6 +255,7 @@ input[type=checkbox]:checked ~ #menu {
 strong  { font-weight: bold; } /* DIK SKRIF WERK NOG NIE */
 
 picture {
+    position: relative;
     overflow: visible; /* weglaat? */
     text-align: center;
     text-indent: 0;
@@ -260,6 +265,10 @@ figcaption {
     font-size: .8em;
     opacity: 0.7;
     position: inherit; /* werk nie */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     bottom: 0; /* werk nie */
 }
 
