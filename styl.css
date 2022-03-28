@@ -261,20 +261,29 @@ picture {
     text-indent: 0;
 }
 
+/* figure {
+  display: table;
+} */
+
 figcaption {
     font-size: .8em;
     opacity: 0.7;
-    position: inherit; /* werk nie */
-    position: absolute;
+    /* display: table-cell;
+    caption-side: bottom; */
+    /*position: inherit;bottom: 0; werk nie relative, bottom 0 werk ook nie
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    bottom: 0; /* werk nie */
+    bottom: 0; /* werk nie */ */
 }
 
 .talen {
     columns: 20em 3; /*   display: grid;grid-template-columns: minmax(100px, 20em);grid-template-rows: 1.5em;grid-auto-flow: column;gap: 0.2em 1em; WERK GLAD NIE
  */
+}
+
+.uua {
+   /* text-align: justify;*/
 }
 
 .siitshoanntshoo {
