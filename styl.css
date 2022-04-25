@@ -27,21 +27,28 @@ html, /*  */
 body {
     margin: 0;
     /*margin-top: 60px;*/ /* eh ń !úbe ='āun ='ē nǀānn ǀàn sīi.  */
-    width: 98.6vw;
+    width: fit-content; /* 98.6vw */
     height: 100vh;
     /*max-width: 60em;*/
     background-color: #231B12;
-    background-image: url("https://cdn.pixabay.com/photo/2019/10/29/11/45/gods-gift-4586740_960_720.jpg");
+    background-image: url("pics/background_080503.jpg");
     /* <source media="(max-width:600px)" srcset="picture-mid.png"> vir prente binne html */
     background-size: cover;
-
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'ubunturegular','CMU','Open Sans','Helvetica Neue',sans-serif;
+}
+@media only screen and (max-width:780-px) {
+    body {
+        background-image: url("pics/background_080503_30.jpg"); /* 'ahnn sii tshoann tshoo */
+    }
 }
 /*:lang(en) eigen taalinstellingen
 :lang(de)*/q {quotes: auto;}
 
-main p { font-family: 'ubuntulight','CMU','Open Sans','Helvetica Neue',sans-serif; line-height: 1.6; }
+main p {
+    font-family: 'ubuntulight','CMU','Open Sans','Helvetica Neue',sans-serif; line-height: 1.6; }
 
 /* nǀānn ǀàn sīi */
 
@@ -162,6 +169,7 @@ a {
 a:hover,
 a:focus {
     color: forestgreen;
+    /* text-shadow: yellowgreen 0 0 1px; */
 }
 
 /* [href$=".pdf"]::after{
@@ -206,8 +214,7 @@ input[type=checkbox]:checked ~ #menu {
     line-height: 2.6;
     /* display: block; */
   }
-  body {
-    background-image: url('https://cdn.pixabay.com/photo/2019/10/29/11/45/gods-gift-4586740_960_720.jpg'); /* 'ahnn sii tshoann tshoo */
+  body { /* /ann thaa n!uun n ba kane kann tam? */
   }
    header img {
     height: 1em; /* header height ń ='āun tàha ké té'e. */
@@ -278,8 +285,9 @@ figcaption {
 }
 
 .talen {
-    columns: 20em 3; /*   display: grid;grid-template-columns: minmax(100px, 20em);grid-template-rows: 1.5em;grid-auto-flow: column;gap: 0.2em 1em; WERK GLAD NIE
+    column-width: clamp(20em, auto, 33%); /*   display: grid;grid-template-columns: minmax(100px, 20em);grid-template-rows: 1.5em;grid-auto-flow: column;gap: 0.2em 1em; WERK GLAD NIE
  */
+    column-count: 3;
 }
 
 .uua {
@@ -309,11 +317,23 @@ figcaption {
 }
 
 .chuantshoe {
-    filter: contrast(150%);
+    filter: contrast(115%) saturate(140%) hue-rotate(3deg);
 }
 
 .txali {
     font-size: .8em;
+    font-weight: bold;
+}
+
+.dtskxani {
+    font-size: .96em;
+    font-family: 'ubuntulight','CMU','Open Sans','Helvetica Neue',sans-serif;
+    padding: .8em;
+}
+
+.qubenxale {
+    font-family: 'ubunturegular','CMU','Open Sans','Helvetica Neue',sans-serif;
+    padding: .8em;
 }
 
 .qum {
@@ -324,15 +344,15 @@ figcaption {
     background: indianred;
     color: white;
 }
-
+/*::selection {background:transparent; text-shadow:#0FF 0 0 2px;}*/
 .kas {
     font-family: 'Georgia', serif;
     font-size: 0.8em;
     color: yellowgreen;
     background: #231B12;
     display: inline-block;
-    margin-left: 1em;
     margin-right: 1em;
+    margin-left: auto;
     float: right;
     text-align: right; /* kana inline-end kana justify-self: end (en bo justify-items???: start) */
 }
@@ -346,6 +366,13 @@ figcaption {
 
 .taalknopje {
     max-height: 1.4em;width:auto;
+}
+
+@media screen and (max-width: 700px) {
+    .talen {
+        columns: 20em 3; /*   display: grid;grid-template-columns: minmax(100px, 20em);grid-template-rows: 1.5em;grid-auto-flow: column;gap: 0.2em 1em; WERK GLAD NIE
+ */
+    }
 }
 
 /* vir tabel
